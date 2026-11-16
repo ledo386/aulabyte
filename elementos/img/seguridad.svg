@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300" role="img" aria-label="Seguridad digital">
+<rect width="600" height="300" fill="#eaf4f9"/>
+<rect x="85" y="56" width="428" height="202" rx="14" fill="#314b5e"/>
+<rect x="101" y="72" width="396" height="169" rx="7" fill="#f7fbfe"/>
+<path d="M301 91l75 28v54c0 48-36 81-75 98-39-17-75-50-75-98v-54z" fill="#64ad9f" stroke="#2c897c" stroke-width="7"/>
+<rect x="275" y="164" width="53" height="47" rx="7" fill="#fcf6e5"/>
+<path d="M288 162v-13a14 14 0 0128 0v13" fill="none" stroke="#fcf6e5" stroke-width="8" stroke-linecap="round"/>
+<circle cx="301" cy="181" r="5" fill="#3c7180"/><path d="M301 183v12" stroke="#3c7180" stroke-width="5"/>
+<circle cx="129" cy="108" r="9" fill="#edbb6d"/><circle cx="466" cy="208" r="9" fill="#edbb6d"/>
+<path d="M146 108h74m159 100h68" stroke="#b4d5df" stroke-width="5" stroke-linecap="round"/>
+</svg>

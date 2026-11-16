@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360" role="img" aria-label="Ilustración de informática">
+<rect width="720" height="360" fill="#ecf5fa"/>
+<circle cx="99" cy="67" r="32" fill="#d3e8fa"/>
+<circle cx="624" cy="278" r="50" fill="#cfefe8"/>
+<path d="M91 135H192L236 96H310M515 99h96l40 36" fill="none" stroke="#8eafb8" stroke-width="5" stroke-linecap="round"/>
+<circle cx="91" cy="135" r="12" fill="#f3b35a"/><circle cx="310" cy="96" r="10" fill="#43a68c"/><circle cx="651" cy="135" r="12" fill="#f3b35a"/>
+<rect x="177" y="76" width="370" height="218" rx="17" fill="#2c4455"/>
+<rect x="191" y="89" width="342" height="189" rx="8" fill="#f7fbff"/>
+<rect x="146" y="294" width="432" height="17" rx="8" fill="#637d8c"/>
+<rect x="301" y="294" width="123" height="8" rx="4" fill="#b8cbd3"/>
+<rect x="223" y="120" width="287" height="31" rx="7" fill="#dcecf8"/>
+<circle cx="239" cy="135" r="5" fill="#64a7c6"/><circle cx="256" cy="135" r="5" fill="#f0b764"/><circle cx="273" cy="135" r="5" fill="#68b69e"/>
+<path d="M266 185l-20 17 20 17M455 185l20 17-20 17M389 177l-54 52" fill="none" stroke="#3c8ea5" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="100" y="209" width="56" height="56" rx="12" fill="#6bb5a4"/><path d="M116 238h23m-11-11v23" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+<rect x="579" y="171" width="60" height="60" rx="13" fill="#eab467"/><circle cx="609" cy="201" r="14" fill="none" stroke="#fff" stroke-width="6"/>
+</svg>

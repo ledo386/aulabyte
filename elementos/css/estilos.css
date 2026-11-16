@@ -1,0 +1,88 @@
+/* AulaByte: diseño inspirado en el ejemplo visual de Marte, con temática informática. */
+:root { --fondo:#060a10; --fondo2:#101923; --panel:#14212c; --texto:#f1f2f3; --suave:#b8c2cc; --acento:#e9b88e; --azul:#8cdbdf; --ancho:1180px; }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--fondo);color:var(--texto);font:16px/1.7 Arial,Helvetica,sans-serif}
+img,video{display:block;max-width:100%;height:auto}
+a{color:var(--azul);text-underline-offset:4px}
+a:hover{color:var(--acento)}
+a:focus-visible{outline:3px solid #f5d2b0;outline-offset:4px}
+h1,h2,h3{line-height:1.14;margin:0 0 1.05rem;font-weight:500;letter-spacing:-.025em}
+h1{font-size:clamp(2.65rem,5.2vw,5.25rem)}h2{font-size:clamp(2rem,3vw,3.15rem)}h3{font-size:1.5rem}
+p{margin:0 0 1.15rem}ul,ol{padding-left:1.45rem}li{margin:.35rem 0}strong{color:#fff}
+.limite{width:min(var(--ancho),calc(100% - 80px));margin-inline:auto}
+.saltar{position:absolute;top:-80px;left:15px;background:white;color:black;padding:8px 14px;z-index:20}.saltar:focus{top:10px}
+/* Cabecera superpuesta sobre la imagen panorámica */
+.cabecera{position:absolute;top:0;left:0;width:100%;z-index:4;padding:25px 0}
+.cabecera-interior{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.marca{font-size:1.23rem;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:white;text-decoration:none}
+.marca:hover{color:var(--acento)}
+.marca span{color:var(--acento)}
+.menu{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px 17px;list-style:none;margin:0;padding:0}
+.menu li{margin:0}.menu a{color:#f7f7f7;font-size:.78rem;letter-spacing:.09em;text-decoration:none;text-transform:uppercase;white-space:nowrap;padding:8px 0;display:block;border-bottom:1px solid transparent}
+.menu a:hover,.menu a[aria-current="page"]{border-color:var(--acento);color:var(--acento)}
+/* Portada: estructura equivalente a la referencia (imagen, titular, tres tarjetas) */
+.hero{position:relative;min-height:780px;background:linear-gradient(90deg,rgba(4,9,15,.75),rgba(4,9,15,.05)),url('../img/hero-tecnologia.svg') center/cover no-repeat;display:flex;align-items:center;padding:150px 0 190px;overflow:hidden}
+.hero:after,.hero-interior:after{content:"";position:absolute;inset:auto 0 0;height:190px;background:linear-gradient(transparent,var(--fondo));pointer-events:none}
+.hero-texto{position:relative;z-index:1;max-width:770px}
+.etiqueta{color:var(--acento);font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;font-weight:bold;margin-bottom:18px}
+.hero h1{max-width:900px;text-shadow:0 3px 24px #0006}.hero .entradilla{font-size:1.12rem;color:#d7e0e4;max-width:660px}
+.boton{display:inline-block;border:1px solid var(--acento);color:#fff;text-decoration:none;text-transform:uppercase;font-size:.78rem;font-weight:bold;letter-spacing:.1em;padding:12px 18px;margin-top:14px;background:#111b24aa}
+.boton:hover{background:var(--acento);color:#0b1015}
+.tarjetas-hero{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;margin-top:-155px}
+.tarjeta{position:relative;display:block;overflow:hidden;aspect-ratio:1.67;background:#172633;color:white;text-decoration:none;border:1px solid #ffffff28}
+.tarjeta img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease,filter .35s ease;filter:brightness(.78)}
+.tarjeta:hover img{transform:scale(1.05);filter:brightness(.95)}
+.tarjeta span{position:absolute;left:0;bottom:0;width:100%;padding:35px 17px 13px;background:linear-gradient(transparent,#07101edc);font-size:1rem;font-weight:bold;letter-spacing:.06em;text-transform:uppercase}
+/* Bloque introductorio negro con enfoque editorial */
+.introduccion{padding:110px 0 105px;text-align:center;background:#050709}
+.introduccion .simbolo{display:block;margin:0 auto 25px;border:1px solid #ffffff44;width:77px;height:77px;border-radius:50%;display:grid;place-items:center;font-size:1.75rem;color:var(--acento)}
+.introduccion h2{font-size:clamp(1.65rem,2.8vw,2.7rem);margin-bottom:25px}.introduccion p{max-width:860px;margin:0 auto;color:#c2c8ce}
+/* Secciones con imágenes a lados alternos, como en la muestra */
+.capitulo{position:relative;min-height:520px;display:flex;align-items:center;padding:95px 0;isolation:isolate}
+.capitulo::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,#101d28ef,#182c36db),url('../img/hero-tecnologia.svg') center/cover}
+.capitulo.secundario::before{background:linear-gradient(90deg,#0c1118ed,#242d34e5),url('../img/hero-tecnologia.svg') center/cover}
+.capitulo.tercero::before{background:linear-gradient(90deg,#131720ed,#0a171fda),url('../img/hero-tecnologia.svg') center/cover}
+.capitulo-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(35px,6vw,100px)}
+.capitulo-grid.invertido .capitulo-imagen{order:-1}
+.capitulo-texto{max-width:590px}.capitulo-texto h2{text-transform:uppercase;font-size:clamp(1.9rem,3.6vw,3rem)}
+.capitulo-texto p{color:#d0d7da}.capitulo-imagen img{width:100%;aspect-ratio:1.55;object-fit:cover;box-shadow:0 22px 65px #0007}
+.texto-enlace{display:inline-block;margin-top:16px;color:var(--acento);text-decoration:none;font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;border-bottom:1px solid currentColor;padding-bottom:3px}
+.texto-enlace:hover{color:white}
+/* Futuro: cierre de fondo espacial/tecnológico, similar al cierre oscuro del ejemplo */
+.futuro{padding:115px 0 130px;text-align:center;background:radial-gradient(ellipse at 50% 15%,#1a3241,#080d15 65%,#05070d)}
+.futuro .limite>p{max-width:780px;margin:0 auto 35px;color:var(--suave)}
+.futuro h2{text-transform:uppercase;letter-spacing:.18em}
+.video-marco{max-width:870px;margin:38px auto 0;border:1px solid #ffffff35;box-shadow:0 22px 80px #000b;background:black;text-align:left}
+.video-marco video{width:100%;aspect-ratio:16/9;background:#060e18}
+.video-marco figcaption{padding:12px 16px;color:#c8d1d5;font-size:.85rem}
+.pie{background:#030608;padding:38px 0;border-top:1px solid #ffffff16}
+.pie-contenido{display:flex;justify-content:space-between;align-items:center;gap:30px;color:#aebcc4;font-size:.86rem}
+.pie a{color:#d8c8b5}
+/* Páginas interiores: misma identidad, titulares panorámicos y contenido editorial */
+.hero-interior{position:relative;min-height:420px;padding:155px 0 110px;background:linear-gradient(90deg,#070e18e8,#111d29ad),url('../img/hero-tecnologia.svg') center/cover;display:flex;align-items:center}
+.hero-interior h1{position:relative;z-index:1;font-size:clamp(2.55rem,5vw,4.4rem)}
+.hero-interior p{position:relative;z-index:1;max-width:630px;color:#d3dde3;font-size:1.08rem}
+.principal-interior{padding:56px 0 90px}
+.indice{padding:25px 29px;margin:0 0 70px;border-left:2px solid var(--acento);background:#101a23}
+.indice h2{font-size:1.06rem;text-transform:uppercase;letter-spacing:.12em}.indice ol,.indice ul{margin:.5rem 0 0;display:flex;flex-wrap:wrap;gap:5px 35px}
+.indice a{color:#e7d0bf}.indice a:hover{color:white}
+.bloque{padding:60px 0;border-bottom:1px solid #ffffff22;scroll-margin-top:20px}
+.bloque:first-of-type{padding-top:20px}.bloque h2{font-size:clamp(1.7rem,3vw,2.6rem)}
+.bloque h3{margin-top:26px;color:var(--acento)}.bloque p,.bloque li,.bloque dd{color:#cbd3d7}
+.bloque figure{margin:25px 0}.bloque figure img{width:100%;max-height:470px;object-fit:cover}
+.bloque figcaption{color:#a9bac6;font-size:.86rem;margin:10px 0}
+.bloque-doble{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.bloque-doble img{width:100%}
+.bloque article+article{margin-top:45px;padding-top:40px;border-top:1px solid #ffffff18}
+pre{max-width:100%;overflow:auto;background:#0e1c2a;color:#d7e8ef;border:1px solid #ffffff24;padding:20px;font-size:.94rem;line-height:1.6}
+.nota{background:#152430;border-left:3px solid var(--acento);padding:27px;margin:50px 0}.nota h2{font-size:1.5rem}
+.lista-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}.mini-card{padding:25px;background:#111f29;border:1px solid #ffffff1e}.mini-card h3{color:#f2d0b1;font-size:1.2rem}.mini-card p{margin-bottom:0}
+.tabla-desplazable{overflow-x:auto;max-width:100%;border:1px solid #ffffff40}
+table{border-collapse:collapse;width:100%;min-width:600px;color:#fff}caption{text-align:left;padding:12px 15px;color:#becbd0}th,td{text-align:left;padding:16px;border-bottom:1px solid #ffffff29}thead{background:#192e3a}tbody tr:nth-child(even){background:#ffffff08}th{color:#f1d0b2}
+dl{margin:0}dt{color:var(--acento);font-weight:700;margin-top:19px}dd{margin:0 0 12px}
+hr{border:0;border-top:1px solid #ffffff25;margin:50px 0}
+/* Adaptación a dispositivos */
+@media(max-width:860px){.limite{width:min(var(--ancho),calc(100% - 38px))}.cabecera{padding:15px 0}.cabecera-interior{align-items:flex-start;flex-direction:column;gap:8px}.menu{justify-content:flex-start;gap:1px 14px}.menu a{font-size:.72rem}.hero{min-height:730px;padding:175px 0 200px}.capitulo{min-height:auto;padding:75px 0}.capitulo-grid{gap:26px}.lista-cards{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){body{font-size:15px}.hero{min-height:770px;padding:165px 0 200px;background-position:60% center}.hero h1{font-size:clamp(2.4rem,10vw,3.6rem)}.hero .entradilla{font-size:1rem}.tarjetas-hero{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:-135px}.tarjeta{aspect-ratio:.80}.tarjeta span{padding:28px 7px 8px;font-size:.64rem;line-height:1.2}.introduccion{padding:80px 0}.capitulo-grid,.bloque-doble{grid-template-columns:1fr}.capitulo-grid.invertido .capitulo-imagen{order:0}.capitulo-texto{max-width:unset}.capitulo{padding:72px 0}.capitulo-imagen img{max-height:300px}.futuro{padding:85px 0}.pie-contenido{flex-direction:column;align-items:flex-start;gap:10px}.hero-interior{min-height:395px;padding:170px 0 66px}.principal-interior{padding-top:25px}.bloque{padding:42px 0}.indice ol,.indice ul{display:block}.lista-cards{grid-template-columns:1fr}.bloque h2{font-size:1.9rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tarjeta img{transition:none}}
